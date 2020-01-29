@@ -46,19 +46,20 @@ body{
 }
 
 .car{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     position: absolute;
 }
 
 #car1{
-    background-color: purple;
+    background: url('4363779-cars-png-images-free-download-car-png-car-png-images-1636_764.png') no-repeat center center;
+    background-size:contain;
     left: 100px;
     top: 375px;
 }
 #car2{
-    background-color: red;
+    background: url('Download-Car-Transparent-PNG-420x202-For-Designing-Purpose.png') no-repeat center center;
+    background-size:contain;
     left: 100px;
     top: 340px;
 }

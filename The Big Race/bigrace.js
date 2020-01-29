@@ -9,14 +9,16 @@ function init(){
     startRace();
 }
 
+
 function startRace(){
+    TweenMax.to("#car2",3,{rotation:360,repeat:0,x:696,ease:Sine.easeOut});
+    TweenMax.to("#car2",2,{x:540, y:-345,delay:1.7, ease:Sine.easeOut});
+    TweenMax.to("#car2",3,{x:-70, y:-350,delay:2.8, ease:Sine.easeOut});
+    TweenMax.to("#car2",3,{x:-75, y:10,delay:5, ease:Sine.easeOut});
+    TweenMax.to("#car2",3,{x:120, y:0,delay:7, ease:Sine.easeOut});
     TweenMax.to("#car1",2,{x:520,ease:Sine.easeOut});
     TweenMax.to("#car1",1.5,{x:520, y:-320,delay:1.7, ease:Sine.easeOut});
     TweenMax.to("#car1",2,{x:-50, y:-300,delay:3, ease:Sine.easeOut});
-}
-function startRace(){
-    TweenMax.to("#car2",3,{x:696,ease:Sine.easeOut});
-    TweenMax.to("#car2",2,{x:540, y:-360,delay:1.7, ease:Sine.easeOut});
-    TweenMax.to("#car2",3,{x:-100, y:-350,delay:3.3, ease:Sine.easeOut});
-    TweenMax.to("#car2",3,{x:0, y:360,delay:5.3, ease:Sine.easeOut});
+    TweenMax.to("#car1",2,{x:-50, y:0,delay:5, ease:Sine.easeOut});
+    TweenMax.to("#car1",2,{x:120, y:0,delay:6.5, ease:Sine.easeOut});
 }
