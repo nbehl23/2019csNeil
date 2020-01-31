@@ -56,10 +56,14 @@ body{
     background-size:contain;
     left: 100px;
     top: 375px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
 }
 #car2{
     background: url('Download-Car-Transparent-PNG-420x202-For-Designing-Purpose.png') no-repeat center center;
     background-size:contain;
     left: 100px;
     top: 340px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
 }
