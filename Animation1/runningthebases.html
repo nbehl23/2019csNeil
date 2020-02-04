@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body{
+            background-color: darkgreen;
+        }
+
+        #football{
+            background: url('football-american-png-4.png') no-repeat center center;
+            background-size: contain;
+            width: 40x;
+            height: 40px;
+            position: absolute;
+            bottom: 50px;
+            z-index: 1;
+        }
+
+        #field{
+            background: url('American-Football-Field-2.png') no-repeat center center;
+            background-size: contain;
+            width: 800px;
+            height: 500px;
+            z-index: 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id='field'>
+    <div id='football'>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src='football.js'></script>
+</html>
