@@ -21,8 +21,8 @@
         #field{
             background: url('American-Football-Field-2.png') no-repeat center center;
             background-size: contain;
-            width: 800px;
-            height: 500px;
+            width: 1000px;
+            height: 700px;
             z-index: 0;
             position: relative;
         }
@@ -37,17 +37,24 @@
             left: 10%;
             }
         #touchdown{
-            height: 350px;
+            height: 100px;
             width: 750 px;
             background-color: darkgreen;
             color: white;
+            position: absolute;
+            bottom: 600px;
+            left: 0px;
+            font-size: 100px;
+            font-family: "Kranky"
         }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
 </head>
 <body>
     <div id='field'>
          <div id='football'></div>
          <div id='player'></div>
+         <div id='touchdown'>TOUCHDOWN!</div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
