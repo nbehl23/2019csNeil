@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body{
+            background-color: darkgreen;
+        }
+
+        #goalpost{
+            background: url('goalpost.png') no-repeat center center;
+            background-size: contain;
+            width: 500px;
+            height: 1000px;
+            position: absolute;
+            left: 675px
+        }
+
+        #football{ 
+            background: url('football-american-png-4.png') no-repeat center center;
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 825px;
+            bottom: 10%
+            }
+    </style>
+</head>
+<body>
+    <div id='goalpost'></div>
+    <div id='football'></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src='fieldgoalgame.js'></script>
+</html>
