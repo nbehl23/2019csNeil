@@ -1,3 +1,5 @@
+var football = $("#football");
+
 init();
 
 function init(){
@@ -5,30 +7,36 @@ function init(){
 }
 
 function startRace(){
-        /*var diameter = 500 ; 
-    TweenMax.to("#football", 2.5 ,{
-        bezier:{curviness:1.5,values:[{x:0,y:0},{x:-diameter/2,y:-diameter/2},{x:diameter/4,y:-diameter}]}
-        ,rotation:1080,delay:.1,ease:Power0.easeNone});*/
-    getKeyAndMove();
+}
+
+$(document).keydown(
+    function(e){
+        var key_code=e.which;
+        switch(key_code){
+            case 37: 
+                
+                    football.finish().animate({
+                        left: "-=10"
+                    });
+                break;
+            case 38: 
+                    football.finish().animate({
+                        top: "-=10"
+                    });
+                break;
+            case 39: 
+                    football.finish().animate({
+                        right: "-=10"
+                    });
+                break;
+            case 40:
+                    football.finish().animate({
+                        top: "-=-10"
+                    });
+                break;						
+        }
     }
-    function getKeyAndMove(e){				
-				var key_code=e.which||e.keyCode;
-				switch(key_code){
-					case 37: 
-						moveLeft();
-						break;
-					case 38: 
-						moveUp();
-						break;
-					case 39: 
-						moveRight();
-						break;
-					case 40:
-						moveDown();
-						break;						
-				}
-			}
-			function moveLeft(){
+			/*function moveLeft(){
 				objImage.style.left=parseInt(objImage.style.left)-5 +'px';
 			}
 			function moveUp(){
@@ -39,5 +47,5 @@ function startRace(){
 			}
 			function moveDown(){
 				objImage.style.top=parseInt(objImage.style.top)+5 +'px';
-			}			
-				
+			}	*/	
+)
