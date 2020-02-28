@@ -16,33 +16,36 @@ $(document).keydown(
             case 37: 
                 
                     football.finish().animate({
-                        left: "-=10",
-                    });
+                        left: "-=10"
+                    },checkCollisions);
                 break;
             case 38: 
                     football.finish().animate({
-                        top: "-=10"
-                    });
+                        top: "-=10",
+                    },checkCollisions);
                 break;
             case 39: 
                     football.finish().animate({
-                        left: "-=-10"
-                    });
+                        left: "-=-10",
+                    },checkCollisions);
                 break;
             case 40:
                     football.finish().animate({
-                        top: "-=-10"
-                    });
+                        top: "-=-10",
+                    },checkCollisions);
                 break;						
         }
     }
 )
-function getPositions(football) {
-  var $box = $("#football");
-  var pos = $box.position();
-  var width = $box.width();
-  var height = $box.height();
-  return [ [ pos.left, pos.left + width ], [ pos.top, pos.top + height ] ];
+function getPositions(element) {
+    console.log("getting position");
+    var elementObj = $(element);
+    var pos = elementObj.position();
+    var width = elementObj.width();
+    var height = elementObj.height();
+    var results = [ [ pos.left, pos.left + width ], [ pos.top, pos.top + height ] ];
+    console.log(results);
+    return results;
 }
         
 function comparePositions(p1, p2) {
@@ -52,12 +55,17 @@ function comparePositions(p1, p2) {
 }
 
 function checkCollisions(){
+    console.log("checking collision");
   var box = $("#toscore")[0];
   var pos = getPositions(box);
 
-  var pos2 = getPositions(this);
+  var pos2 = getPositions(football);
   var horizontalMatch = comparePositions(pos[0], pos2[0]);
   var verticalMatch = comparePositions(pos[1], pos2[1]);            
   var match = horizontalMatch && verticalMatch;
-  if (match) { $("body").append("<p>COLLISION !!!</p>"); }
+  if (match) {disappear;}
+}
+
+function disappear(){
+    document.getElementById(football).style.display = "none";
 }
