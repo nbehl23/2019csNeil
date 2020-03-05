@@ -38,7 +38,6 @@ $(document).keydown(
     }
 )
 function getPositions(element) {
-    console.log("getting position");
     var elementObj = $(element);
     var pos = elementObj.position();
     var width = elementObj.width();
@@ -49,14 +48,22 @@ function getPositions(element) {
 }
         
 function comparePositionsx() {
-    if (pos[0]>pos2[0]) true
+    var box = $("#toscore");
+    var pos = getPositions(box)
+    var pos2 = getPositions(football);
+
+    if (pos[0]>pos2[0]) console.log("true")
+
 }
 function comparePositionsy(){
+    var box = $("#toscore");
+    var pos = getPositions(box);
+    var pos2 = getPositions(football);
+
     if (pos[1]>pos2[1]) true
 }
 
 function checkCollisions(){
-    console.log("checking collision");
   var box = $("#toscore")[0];
   var pos = getPositions(box);
 
